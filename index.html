@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Wilson Júnior</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <style>
+      body {
+        font: 14px "Lucida Console", Monaco, monospace;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: justify;
+        padding: 20px;
+        color: #eeeeec;
+        background-color: #233436;
+      }
+      h1, h2, h3 {color: #4e9a06;}
+      a {color: #8ae234;}
+      ul {padding-left: 20px;}
+     #portuguese {display: none;}
+     @media only screen and (min-width: 600px) {
+       body {width: 800px;}
+     }
+    </style>
+    <script>
+     window.showAndHide = function (a, b) {
+       function s(e, s) { document.getElementById(e).style.display = s; }
+       s(a, 'block');
+       s(b, 'none');
+     };
+    </script>
+  </head>
+  <body>
+    <h1>wpjunior</h1>
+
+    <img src="http://www.gravatar.com/avatar/742170287f2ad5059408d262f6d66f88" />
+
+    <div id="english">
+      <h2> English - <a onclick="showAndHide('portuguese', 'english');" href="#">Português</a></h2>
+
+      <h3>Software Engineer</h3>
+      <small>Brazil</small>
+      <h2>About me</h2>
+      <p>A simple and curious man, passionate by tech, music, animes, and learn new stuffs.</p>
+
+      <h2>Work</h2>
+
+      <p>Currently, I am a Staff Software Enginner at <a href="https://tsuru.io">Tsuru.io</a> a project maintained by <a href="https://www.globo.com">Globo</a>.
+      </p>
+
+      <h2>Social medias</h2>
+      <ul>
+        <li><a href="https://github.com/wpjunior">GitHub</a></li>
+        <li><a href="https://wilsonjnior.medium.com">Medium</a></li>
+      </ul>
+    </div>
+
+    <div id="portuguese">
+      <h2> Português - <a onclick="showAndHide('english', 'portuguese');" href="#">English</a></h2>
+
+      <h3>Engenheiro de Software</h3>
+      <small>Brasil</small>
+      <h2>Sobre mim</h2>
+      <p>Um simples e curioso cara, goiano, apaixonado por tecnologia, música, animes e aprender coisas novas.</p>
+
+      <h2>Trabalho</h2>
+
+      <p>Atualmente sou Engenheiro de Software no projeto <a href="http://tsuru.io">Tsuru.io</a> mantido pela <a href="https://www.globo.com">Globo</a>.
+      </p>
+
+      <h2>Mídias sociais</h2>
+      <ul>
+        <li><a href="https://github.com/wpjunior">GitHub</a></li>
+        <li><a href="https://wilsonjnior.medium.com">Medium</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+body {
+  background:url(body.jpg) repeat-x #eeeeec;
+  font: 13px "DejaVu Sans Condensed", "Bistream Versa Sans", arial, sans-serif;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+}
+
+li ul {
+  display: none;
+}
+td {
+  vertical-align: top;
+}
+td#left {
+  padding-top: 10px;
+  padding-right: 20px;
+}
+td#center {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+td#right {
+  width: 150px;
+}
+p {
+  padding-left: 10px;
+}
+h1 {
+  color: #eeeeec;
+  font: bold 30px Helvetica, Verdana, Arial, sans-serif;
+  margin-top: 3px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font: bold 20px Helvetica, Verdana, Arial, sans-serif;
+  color: #2e3436;
+  margin: 0px;
+}
+
+h3 {
+  font: bold 16px Helvetica, Verdana, Arial, sans-serif;
+  color: #2e3436;
+}
+h4 {
+  font: bold 14px Helvetica, Verdana, Arial, sans-serif;
+  color: #2e3436;
+}
+h5 {
+  font: bold 12px Helvetica, Verdana, Arial, sans-serif;
+  color: #2e3436;
+}
+div#photo {
+  color: black;
+  float: left;
+  padding: 10px;
+}
+div#right {
+  font-size: 11pt;
+  color: black;
+  padding-left: 10px;
+  float: right;
+  width: 170px;
+  position: relative;
+}
+div#content {
+  font-size: 11pt;
+  color: black;
+  padding: 10px;
+}
+.bloco {
+  background: rgb(238, 238, 236);
+  background: rgba(238, 238, 236, 0.5);
+  border: 1px solid #cccccc;
+}
+
+#right ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  background: transparent;
+}
+#right a:hover {
+  background-color: #204a87;
+  color: #F6F6F6;
+}
+
+#right ul li {
+  margin: 0;
+  display: inline;
+}
+
+#right a {
+  float: top;
+  color: #2e3436;
+  text-decoration: none;
+  display: block;
+  padding: 2px 6px;
+  height: 20px;
+  max-height: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  margin-left: -1px;
+  overflow: hidden;
+}
