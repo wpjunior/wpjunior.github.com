@@ -1,0 +1,217 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Instalando o Lethus Social &mdash; Lethus Social v0.1dev documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Lethus Social v0.1dev documentation" href="index.html" />
+    <link rel="prev" title="Lethus Social - Documentação" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navegação</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Índice Geral"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="index.html" title="Lethus Social - Documentação"
+             accesskey="P">anterior</a> |</li>
+        <li><a href="index.html">Lethus Social v0.1dev documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="instalando-o-lethus-social">
+<h1>Instalando o Lethus Social<a class="headerlink" href="#instalando-o-lethus-social" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="dependencias">
+<h2>Dependências<a class="headerlink" href="#dependencias" title="Link permanente para este título">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http:www.python.org">Python</a> 2.7 ou superior</li>
+<li><a class="reference external" href="http://www.djangoproject.com/">Django</a> 1.3 ou superior</li>
+<li><a class="reference external" href="http://mongoengine.org/">MongoEngine</a> 0.5 ou superior</li>
+<li><a class="reference external" href="http://www.xhtml2pdf.com/">Pisa</a></li>
+<li><a class="reference external" href="http://www.reportlab.com/software/opensource/">ReportLab</a></li>
+<li><a class="reference external" href="https://github.com/wpjunior/lethusbox/">Lethusbox</a></li>
+<li><a class="reference external" href="https://github.com/wpjunior/django-mongoforms">Django Mongo Forms</a></li>
+<li><a class="reference external" href="https://github.com/wpjunior/django-mongoviews">Django Mongo Views</a></li>
+</ul>
+</div>
+<div class="section" id="banco-de-dados">
+<h2>Banco de Dados<a class="headerlink" href="#banco-de-dados" title="Link permanente para este título">¶</a></h2>
+<p>O Lethus Social utiliza o banco de dados <a class="reference external" href="http://www.mongodb.org">MongoDB</a> um banco de dados <a class="reference external" href="http://pt.wikipedia.org/wiki/NoSQL">NoSQL</a> sendo formado por um conjunto de documentos <a class="reference external" href="http://pt.wikipedia.org/wiki/JSON">JSON</a>.
+Então instale a última versão estavél e instale nas máquinas que serão destinadas à Banco de Dados.</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="http://www.mongodb.org/display/DOCS/SQL+to+Mongo+Mapping+Chart">Do SQL para o MongoDB</a></li>
+<li><a class="reference external" href="http://www.mongodb.org">Site Oficial do MongoDB</a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="configuracao">
+<h2>Configuração<a class="headerlink" href="#configuracao" title="Link permanente para este título">¶</a></h2>
+<dl class="docutils">
+<dt>Criando o primeiro administrador do sistema</dt>
+<dd><p class="first">execute na raiz do projeto:</p>
+<blockquote class="last">
+<div>python manage.py createadmin</div></blockquote>
+</dd>
+<dt>Gerando Estatísticas sobre o uso do sistema</dt>
+<dd><p class="first">Agende o seguinte comando via cron:</p>
+<blockquote class="last">
+<div>python manage.py makestats</div></blockquote>
+</dd>
+</dl>
+</div>
+<div class="section" id="servidor-de-aplicacao">
+<h2>Servidor de Aplicação<a class="headerlink" href="#servidor-de-aplicacao" title="Link permanente para este título">¶</a></h2>
+<dl class="docutils">
+<dt>O Lethus Social pode ser executado em produção de dois modos:</dt>
+<dd><ul class="first last simple">
+<li>Usando o <a class="reference external" href="http://httpd.apache.org/">Apache2</a> + <a class="reference external" href="http://code.google.com/p/modwsgi/">ModWSGI</a></li>
+<li>Usando <a class="reference external" href="http://nginx.org/">Nginx</a> + <a class="reference external" href="http://projects.unbit.it/uwsgi/">UWSGI</a></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="apache2-vs-nginx">
+<h2>Apache2 vs Nginx<a class="headerlink" href="#apache2-vs-nginx" title="Link permanente para este título">¶</a></h2>
+<p>Atualmente o Apache2 possui mais suporte quando o assunto é produção, instalação configuração, porém o NGinx está se destacando pela eficiência, e também possui suporte a balanceamento de servidores. segue a baixo os pontos fortes de cada serviço.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="47%" />
+<col width="28%" />
+<col width="26%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Apache + WSGI</th>
+<th class="head" colspan="2">NGinx + UWSGI</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Fácil Configuração</td>
+<td colspan="2">Eficiência e Robustez</td>
+</tr>
+<tr><td>Fácil Instalação</td>
+<td colspan="2">Suporte a Balanceamento</td>
+</tr>
+<tr><td>Suporte</td>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr><td>Experiência</td>
+<td colspan="2">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="usando-o-apache2">
+<h2>Usando o Apache2<a class="headerlink" href="#usando-o-apache2" title="Link permanente para este título">¶</a></h2>
+<p>exemplo de arquivo de configuração</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>&lt;VirtualHost <a href="#id1"><span class="problematic" id="id2">*</span></a>:80&gt;</dt>
+<dd>WSGIScriptAlias / /pasta do projeto/django_wsgi.py
+DocumentRoot /var/www</dd>
+</dl>
+<p>&lt;/VirtualHost&gt;</p>
+</div></blockquote>
+</div>
+<div class="section" id="usando-o-nginx">
+<h2>Usando o NGINX<a class="headerlink" href="#usando-o-nginx" title="Link permanente para este título">¶</a></h2>
+<p>Links úteis para a configuração do servidor</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="http://brandonkonkle.com/blog/2010/sep/14/django-uwsgi-and-nginx/">http://brandonkonkle.com/blog/2010/sep/14/django-uwsgi-and-nginx/</a></li>
+<li><a class="reference external" href="http://www.westphahl.net/blog/2010/4/8/running-django-nginx-and-uwsgi/">http://www.westphahl.net/blog/2010/4/8/running-django-nginx-and-uwsgi/</a></li>
+<li><a class="reference external" href="http://projects.unbit.it/uwsgi/wiki/RunOnNginx">http://projects.unbit.it/uwsgi/wiki/RunOnNginx</a></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Tabela de Conteúdo</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Instalando o Lethus Social</a><ul>
+<li><a class="reference internal" href="#dependencias">Dependências</a></li>
+<li><a class="reference internal" href="#banco-de-dados">Banco de Dados</a></li>
+<li><a class="reference internal" href="#configuracao">Configuração</a></li>
+<li><a class="reference internal" href="#servidor-de-aplicacao">Servidor de Aplicação</a></li>
+<li><a class="reference internal" href="#apache2-vs-nginx">Apache2 vs Nginx</a></li>
+<li><a class="reference internal" href="#usando-o-apache2">Usando o Apache2</a></li>
+<li><a class="reference internal" href="#usando-o-nginx">Usando o NGINX</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Tópico anterior</h4>
+  <p class="topless"><a href="index.html"
+                        title="capítulo anterior">Lethus Social - Documentação</a></p>
+  <h3>Esta Página</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/install.txt"
+           rel="nofollow">Exibir Fonte</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Pesquisa rápida</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Ir" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Digite os termos da busca ou o nome de um módulo, classe ou função.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navegação</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Índice Geral"
+             >índice</a></li>
+        <li class="right" >
+          <a href="index.html" title="Lethus Social - Documentação"
+             >anterior</a> |</li>
+        <li><a href="index.html">Lethus Social v0.1dev documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Lethus TI.
+      Criado com <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

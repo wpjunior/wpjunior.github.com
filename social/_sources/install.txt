@@ -1,0 +1,81 @@
+==============================
+Instalando o Lethus Social
+==============================
+
+Dependências
+------------
+- `Python <http:www.python.org>`_ 2.7 ou superior
+- `Django <http://www.djangoproject.com/>`_ 1.3 ou superior 
+- `MongoEngine <http://mongoengine.org/>`_ 0.5 ou superior 
+- `Pisa <http://www.xhtml2pdf.com/>`_
+- `ReportLab <http://www.reportlab.com/software/opensource/>`_
+- `Lethusbox <https://github.com/wpjunior/lethusbox/>`_
+- `Django Mongo Forms <https://github.com/wpjunior/django-mongoforms>`_
+- `Django Mongo Views <https://github.com/wpjunior/django-mongoviews>`_
+
+Banco de Dados
+--------------
+
+O Lethus Social utiliza o banco de dados `MongoDB <http://www.mongodb.org>`_ um banco de dados `NoSQL <http://pt.wikipedia.org/wiki/NoSQL>`_ sendo formado por um conjunto de documentos `JSON <http://pt.wikipedia.org/wiki/JSON>`_.
+Então instale a última versão estavél e instale nas máquinas que serão destinadas à Banco de Dados.
+
+    - `Do SQL para o MongoDB <http://www.mongodb.org/display/DOCS/SQL+to+Mongo+Mapping+Chart>`_
+    - `Site Oficial do MongoDB <http://www.mongodb.org>`_
+
+Configuração
+------------
+Criando o primeiro administrador do sistema
+ execute na raiz do projeto:
+
+     python manage.py createadmin
+
+
+Gerando Estatísticas sobre o uso do sistema
+  Agende o seguinte comando via cron:
+
+      python manage.py makestats
+
+
+Servidor de Aplicação
+---------------------
+
+O Lethus Social pode ser executado em produção de dois modos:
+    - Usando o `Apache2 <http://httpd.apache.org/>`_ + `ModWSGI <http://code.google.com/p/modwsgi/>`_
+    - Usando `Nginx <http://nginx.org/>`_ + `UWSGI <http://projects.unbit.it/uwsgi/>`_
+
+Apache2 vs Nginx
+----------------
+
+Atualmente o Apache2 possui mais suporte quando o assunto é produção, instalação configuração, porém o NGinx está se destacando pela eficiência, e também possui suporte a balanceamento de servidores. segue a baixo os pontos fortes de cada serviço.
+
++--------------------+------------+-----------+
+|  Apache + WSGI     | NGinx + UWSGI          |
++====================+========================+
+| Fácil Configuração | Eficiência e Robustez  |
++--------------------+------------------------+
+| Fácil Instalação   | Suporte a Balanceamento|
++--------------------+------------------------+
+| Suporte            |                        |
++--------------------+------------------------+
+| Experiência        |                        |
++--------------------+------------------------+
+
+
+Usando o Apache2
+----------------
+
+exemplo de arquivo de configuração
+
+    <VirtualHost *:80>
+	WSGIScriptAlias / /pasta do projeto/django_wsgi.py
+	DocumentRoot /var/www
+    </VirtualHost>
+
+
+Usando o NGINX
+--------------
+Links úteis para a configuração do servidor
+
+  - http://brandonkonkle.com/blog/2010/sep/14/django-uwsgi-and-nginx/
+  - http://www.westphahl.net/blog/2010/4/8/running-django-nginx-and-uwsgi/
+  - http://projects.unbit.it/uwsgi/wiki/RunOnNginx
