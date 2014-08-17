@@ -1,46 +1,104 @@
+<!doctype html>
 <html>
   <head>
     <title>Wilson Júnior</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
     <style>
       body {
-        background:url(body.jpg) repeat-x #eeeeec;
-        font: 13px "DejaVu Sans Condensed", "Bistream Versa Sans", arial, sans-serif;
+        font: 14px "Lucida Console", Monaco, monospace;
         margin-right: auto;
         margin-left: auto;
-        width: 600px;
         text-align: justify;
+        padding: 20px;
+        color: #eeeeec;
+        background-color: #233436;
       }
+      h1, h2, h3 {color: #4e9a06;}
+      a {color: #8ae234;}
+      ul {padding-left: 20px;}
+     #portuguese {display: none;}
+     @media only screen and (min-width: 600px) {
+       body {width: 600px;}
+     }
     </style>
+    <script>
+     window.showAndHide = function (a, b) {
+       document.getElementById(a).style.display = 'block';
+       document.getElementById(b).style.display = 'none';
+     };
+    </script>
   </head>
   <body>
     <h1>Wilson Júnior</h1>
-    <h3>Analista/Desenvolvedor de Software, Músico</h3>
-    <small>Corumbá de Goiás/Brasil</small>
-    <h2>Sobre mim</h2>
-    <p>Um simples garoto cristão, apaixonado por tecnologia e música.</p>
-    <p>Estudei Tecnologia em Análise e Desenvolvimento de Sistemas na Faculdade Anhanguera de Anápolis (01/2010 a 06/2012).</p>
 
-    <p>Sou músico desde a infância, nos finais de semana toco guitarra na Santa Missa.</p>
+    <img src="http://www.gravatar.com/avatar/742170287f2ad5059408d262f6d66f88" />
 
-    <h2>Trabalho</h2>
+    <div id="english">
+      <h2> English - <a onclick="showAndHide('portuguese', 'english');" href="#">Português</a></h2>
 
-    <p>Atualmente sou Analista/Desenvolvedor de Software na <a href="http://lethus.com.br">Lethus TI</a>, Lá a gente trabalha tecnologias bem legais como: <a href="http://python.org">Python</a>, <a href="http://www.djangoproject.com">Django</a>, <a href="http://mongodb.org">MongoDB</a>, Scrum, Node.JS, etc.
-    </p>
+      <h3>Software Developer</h3>
+      <small>Rio de Janeiro/Brazil</small>
+      <h2>About me</h2>
+      <p>A simple Christian Boy, passionate by tech and music</p>
 
-    <p>Também sou Desenvolvedor/Contribuidor do projeto de código aberto <a href="http://mongoengine.org">MongoEngine</a>.</p>
+      <h2>Work</h2>
 
-    <p>Na minha adolescência participei de vários projetos de código aberto como: <a href="http://biglinux.net">BigLinux</a>, <a href="http://gnome.org">GNOME</a>,
-      também liderei o desenvolvimento de um software de gestão de lanhouses para o projeto GNOME, <a href="https://github.com/wpjunior/openlanhouse">OpenLanhouse</a>
-    </p>
+      <p>Currently, I am Software Developer at <a href="http://www.globo.com">Globo.com</a>, I work with very cool tecnologies as: NodeJS, Python, Ruby, MongoDB, Scrum and more.
+      </p>
 
+      <p>I also I am a developer of <a href="http://mongoengine.org">MongoEngine</a> Project</p>
 
-    <h2>Sonho</h2>
-    <p>
-      Eu não sou de sonhar com muita coisa, mais pretendo me esforçar o máximo para cuidar bem das pessoas que eu amo, acredito que motivação maior que essa não existe, e a resposta para ser feliz é amar como a bíblia nos manda.</p>
-    
-    <h2>Contato</h3>
-    <p>E-Mail: wilsonpjunior@gmail.com</p>
-    <p>Telefone: (62) 8166-9629</p>
+      <p>I already contributed to many open-source projects as: <a href="http://biglinux.net">BigLinux</a>, <a href="http://gnome.org">GNOME</a>,
+        And led a development of <a href="https://github.com/wpjunior/openlanhouse">OpenLanhouse</a> a GNOME Cyber Coffer Manager
+      </p>
+
+      <h2>Education</h2>
+      <ul>
+        <li>Master Business Administration Project Management (2013-2014)</li>
+        <li>Analysis and Systems Development (2010-2012)</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="https://github.com/wpjunior">GitHub</a></li>
+        <li><a href="https://www.facebook.com/wilson.junior3">Facebook</a></li>
+        <li><a href="https://www.linkedin.com/profile/view?id=110552166">Linkedin</a>
+      </ul>
+    </div>
+
+    <div id="portuguese">
+      <h2> Português - <a onclick="showAndHide('english', 'portuguese');" href="#">English</a></h2>
+
+      <h3>Desenvolvedor de Software</h3>
+      <small>Rio de Janeiro/Brasil</small>
+      <h2>Sobre mim</h2>
+      <p>Um simples garoto cristão, goiano, apaixonado por tecnologia e música.</p>
+
+      <h2>Trabalho</h2>
+
+      <p>Atualmente sou Desenvolvedor de Software na <a href="http://www.globo.com">Globo.com</a>, Trabalho com tecnologias bem legais como NodeJS, Python, Ruby, MongoDB, Scrum e etc.
+      </p>
+
+      <p>Também sou Desenvolvedor do projeto de código aberto <a href="http://mongoengine.org">MongoEngine</a></p>
+
+      <p>Já contribui com vários projetos de código aberto como: <a href="http://biglinux.net">BigLinux</a>, <a href="http://gnome.org">GNOME</a>,
+        também liderei o desenvolvimento de um software de gestão de Lanhouses para o projeto GNOME, <a href="https://github.com/wpjunior/openlanhouse">OpenLanhouse</a>
+      </p>
+
+      <h2>Escolaridade</h2>
+
+      <ul>
+        <li>MBA em Gerência de Projetos, UniEvangélica - Anápolis/Goiás (2013-2014)</li>
+        <li>Análise e Desenvolvimento de Sistemas, Faculdade Anhanguera de Anápolis (2010-2012)</li>
+      </ul>
+
+      <h2>Contato</h2>
+      <ul>
+        <li><a href="https://github.com/wpjunior">GitHub</a></li>
+        <li><a href="https://www.facebook.com/wilson.junior3">Facebook</a></li>
+        <li><a href="https://www.linkedin.com/profile/view?id=110552166">Linkedin</a>
+      </ul>
+    </div>
   </body>
 </html>
