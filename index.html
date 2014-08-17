@@ -24,8 +24,9 @@
     </style>
     <script>
      window.showAndHide = function (a, b) {
-       document.getElementById(a).style.display = 'block';
-       document.getElementById(b).style.display = 'none';
+       function s(e, s) { document.getElementById(e).style.display = s; }
+       s(a, 'block');
+       s(b, 'none');
      };
     </script>
   </head>
@@ -44,13 +45,13 @@
 
       <h2>Work</h2>
 
-      <p>Currently, I am Software Developer at <a href="http://www.globo.com">Globo.com</a>, I work with very cool tecnologies as: NodeJS, Python, Ruby, MongoDB, Scrum and more.
+      <p>Currently, I am Software Developer at <a href="http://www.globo.com">Globo.com</a>, I work with very cool tecnologies such as: NodeJS, Python, Ruby, MongoDB, Scrum and more.
       </p>
 
-      <p>I also I am a developer of <a href="http://mongoengine.org">MongoEngine</a> Project.</p>
+      <p>I also I am a developer of MongoEngine Project <a href="http://mongoengine.org">mongoengine.org</a>.</p>
 
-      <p>I already contributed to many open-source projects as: <a href="http://biglinux.net">BigLinux</a>, <a href="http://gnome.org">GNOME</a>,
-        And led a development of <a href="https://github.com/wpjunior/openlanhouse">OpenLanhouse</a> a GNOME Cyber Coffer Manager.
+      <p>I have contributed to many open-source projects such as: BigLinux <a href="http://gnome.org">GNOME</a>,
+        And led a development of <a href="https://github.com/wpjunior/openlanhouse">OpenLanhouse</a> a GNOME Cyber Cofffe Manager.
       </p>
 
       <h2>Education</h2>
@@ -82,7 +83,7 @@
 
       <p>Também sou Desenvolvedor do projeto de código aberto <a href="http://mongoengine.org">MongoEngine</a>.</p>
 
-      <p>Já contribui com vários projetos de código aberto como: <a href="http://biglinux.net">BigLinux</a>, <a href="http://gnome.org">GNOME</a>,
+      <p>Já contribui com vários projetos de código aberto como: BigLinux, <a href="http://gnome.org">GNOME</a>,
         também liderei o desenvolvimento de um software de gestão de Lanhouses para o projeto GNOME, <a href="https://github.com/wpjunior/openlanhouse">OpenLanhouse.</a>
       </p>
 
