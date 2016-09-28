@@ -14,7 +14,6 @@ var actions = [
     {type: 'write', text: 'Just thank you'},
     {type: 'colorize'},
     {type: 'sleep', time: 6000},
-    {type: 'wall'},
 ];
 
 var currentAction = 0;
