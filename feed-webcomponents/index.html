@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Simple template</title>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <h1>Simple Feed with web components</h1>
+
+  <template id="bastian-post">
+    <style>.post-notifier-pushstream{display:none}.bstn-fd .bastian-card-mobile,.bstn-item-shape,.tag-manager-publicidade-banner_feed_esppub--visivel .tag-manager-publicidade-banner_feed_esppub{background-color:#fff;contain:layout paint style;margin:16px 0 0;overflow:hidden}.feed-media-wrapper{margin:24px -24px 0}.bstn-fd-item-cover{background-color:#ccc;background-position:50%;background-size:cover;height:0;overflow:hidden;padding-top:56.25%;position:relative;width:100%}.bstn-fd-cover-picture{position:absolute;top:0;left:0;height:100%;width:100%}.bstn-fd-picture-image{color:transparent;height:100%;width:100%}.feed-post-body{padding:24px 24px 0}.feed-post-link{display:block;text-decoration:none}.feed-post-header{color:#333;font:16px/20px Arial,sans-serif;letter-spacing:-.32px}.bstn-aovivo-label,.feed-post-header-chapeu{vertical-align:middle}.bstn-aovivo-label{background:red;border-radius:3px;color:#fff;display:inline-block;font:700 11px Arial,sans-serif;margin:0 8px 0 0;padding:3px 8px 2px;position:relative;text-transform:uppercase}.feed-post-body-title{font:700 20px/24px Arial,sans-serif;letter-spacing:-.72px;margin-top:8px;word-wrap:break-word}.feed-post-body-title:first-child{margin-top:0}.bstn-related .feed-post-body-title{display:block;font-size:16px;line-height:20px;letter-spacing:-.48px;margin-top:24px}.feed-post-body-resumo{color:#555;font:16px/20px Arial,sans-serif;letter-spacing:-.32px;margin-top:8px}.feed-post-metadata{align-items:center;color:#555;display:block;font:12px/12px Arial,sans-serif;justify-content:flex-start;letter-spacing:0;margin:24px 0 0}.feed-post-metadata:last-child{margin:24px 0}.feed-media-wrapper+.feed-post-metadata{margin:16px 0}.bstn-related .feed-post-metadata{margin:16px 0 0}.feed-post-datetime{white-space:nowrap}.feed-post-metadata>:after{content:"— ";margin-left:4px}.feed-post-metadata>:last-child:after{display:none}.feed-post-metadata-section:before{content:"Em "}.bstn-related{margin:24px 0}.feed-media-wrapper~.bstn-related{margin:16px 0 24px}.bstn-relateditems{list-style-type:none}.bstn-relateditem{color:#999;border-top:1px solid #ddd;margin-top:16px;padding:0;background-color:#fff}.bstn-relateditem+.bstn-relateditem{margin-top:24px}.bstn-face-temporeal .bstn-aovivo-label{background-color:#3b9c00}.label-tempo-real,.scoreboard-bastian-feed{display:none}.highlight-bastian-feed{display:none;color:#555;font-size:16px;letter-spacing:-.32px;line-height:20px;display:block;margin:8px 0 0}.highlight-bastian-feed .time{font-size:12px;line-height:16px;margin-bottom:8px}.highlight-bastian-feed .text{margin-bottom:4px}.load-more{margin:16px 24px 0;text-align:center;text-transform:uppercase}.load-more a{color:#fff;display:block;font:700 14px Arial,sans-serif;padding:15px 0}@media (max-width:539px){body{background-color:#eee}.areatemplate-showtime,body{margin:0}.regua-apuracao~main .areatemplate-showtime{margin-top:16px}.areatemplate-esquerda{float:left;margin-top:16px!important;padding-left:12px;padding-right:12px;width:100%}.regua-apuracao~main .areatemplate-esquerda{margin-top:0!important}.regua-apuracao~main>.row+.row>.areatemplate-esquerda{margin-top:16px!important}}@media (min-width:540px){.bstn-fd .bstn-item-shape{box-shadow:none;background-color:transparent;border-radius:0;margin:32px 0 0}.bstn-fd .bstn-item-shape:after{background-color:#c8c8c8;content:"";display:block;height:1px;margin-top:32px}#bstn-rtcl .bstn-item-shape{background-color:#fff;contain:layout paint style;overflow:hidden}.no-image .feed-post{min-height:auto}.feed-post-body{align-items:start;column-gap:16px;grid-column-gap:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(45%,-webkit-max-content));grid-template-columns:repeat(auto-fit,minmax(45%,max-content));grid-template-rows:repeat(5,auto);padding:0}.feed-post-header{letter-spacing:-.75px;grid-column:2;padding-bottom:8px}.feed-post-body-title{font-size:24px;letter-spacing:-1.25px;line-height:28px;grid-column:2;margin:4px 0 0}.feed-post-body-title:first-child{margin-top:0}.bstn-related .feed-post-body-title{font-size:14px;font-weight:400;letter-spacing:-.3px;line-height:normal}.feed-post-body-resumo{grid-column:2;letter-spacing:-.3px;margin:10px 0 7px}.feed-media-wrapper{margin:0;grid-column:1;grid-row:1/span 5}.feed-post-metadata{grid-column:2;margin:6px 0 0}.feed-media-wrapper+.feed-post-metadata,.feed-post-metadata:last-child{margin:6px 0 0}.bstn-related .feed-post-metadata{display:none}.bstn-related~.feed-post-metadata{margin-top:6px}.bstn-related{display:block;grid-column:2;grid-row:3}.bstn-related,.feed-media-wrapper~.bstn-related{margin:6px 0 0 1px}.scoreboard-bastian-feed~.bstn-related{grid-row:4}.bstn-relateditems{list-style-type:disc;padding:0 0 0 16px}.bstn-relateditem{border:0;margin:2px 0;background-color:transparent;padding:4px 0}.bstn-relateditem+.bstn-relateditem{margin-top:2px}.bstn-fd .bastian-card-mobile,.bstn-fd .tag-manager-publicidade-container--visivel,.tag-manager-publicidade-banner_feed_esppub--visivel .tag-manager-publicidade-banner_feed_esppub{box-shadow:none;background-color:transparent;border-radius:0;margin:32px 0 0}.bs-home .areatemplate-direita,.bs-home .areatemplate-esquerda{margin-top:40px}}</style>
+
+    <div class="feed-post bstn-item-shape type-basico">
+      <div class="feed-post-body">
+        <div class="feed-post-header with-post-chapeu">
+          <span class="feed-post-header-chapeu"><slot name="chapeu"></slot></span>
+        </div>
+        <div class="feed-post-body-title gui-color-primary gui-color-hover ">
+          <div class="_s">
+            <div class="_b">
+              <slot name="title" />
+
+            </div>
+          </div>
+        </div>
+        <div class="feed-post-body-resumo">
+          <div class="_s">Um dos suspeitos precisou de atendimento médico; o outro foi preso em flagrante.</div>
+        </div>
+        <div class="feed-media-wrapper">
+          <div class="_s">
+            <a href="https://g1.globo.com/am/amazonas/noticia/2019/12/05/motorista-persegue-e-atropela-assaltantes-apos-roubo-video-mostra-suspeitos-voando-sobre-carro.ghtml" class="feed-post-figure-link gui-image-hover">
+              <div class="_preempt-visibility">
+                <div class="bstn-fd-item-cover ">
+                  <picture class="bstn-fd-cover-picture">
+                    <slot name="picture"></slot>
+                  </picture>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="feed-post-metadata">
+          <span class="feed-post-datetime"><slot name="issued"></slot></span>
+          <span class="feed-post-metadata-section"><slot name="section"></slot> </span>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <bastian-post>
+    <span slot="chapeu">Amazonas</span>
+    <span slot="issued">Há 8 horas</span>
+    <span slot="section">Mundo tristão</span>
+    <img class="bstn-fd-picture-image" alt="Foto: (Reprodução)" title="Foto: (Reprodução)" src="https://s2.glbimg.com/INZ4Wq2SBbpNJlQaK4WQU82_fm0=/0x0:1280x720/540x304/smart/http://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/j/3/rQUQW7QX6hYBYJu0fJvA/whatsapp-image-2019-12-05-at-12.15.15.jpeg" slot="picture">
+    <a href="https://g1.globo.com/am/amazonas/noticia/2019/12/05/motorista-persegue-e-atropela-assaltantes-apos-roubo-video-mostra-suspeitos-voando-sobre-carro.ghtml" class="feed-post-link gui-color-primary gui-color-hover" slot="title">VÍDEO: motorista persegue e atropela assaltantes em moto</a>
+  </bastian-post>
+
+  <bastian-post>
+    <span slot="chapeu">Goias</span>
+    <span slot="issued">Há 90 horas</span>
+    <span slot="section">Eita nois</span>
+    <a href="https://g1.globo.com/am/amazonas/noticia/2019/12/05/motorista-persegue-e-atropela-assaltantes-apos-roubo-video-mostra-suspeitos-voando-sobre-carro.ghtml" class="feed-post-link gui-color-primary gui-color-hover" slot="title">VÍDEO: motorista é feliz</a>
+    <img class="bstn-fd-picture-image" alt="Foto: (Reprodução)" title="Foto: (Reprodução)" src="https://s2.glbimg.com/kt7Jm-fnKukwC9x5pBrVR_h5mv0=/0x0:1525x858/540x304/smart/http://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/Z/F/LHBJtFSJaMcip1GCcMWw/ep8-ff-005232.jpg" slot="picture">
+  </bastian-post>
+
+</body>
+</html>
